@@ -1,0 +1,84 @@
+/* --- Main Header Section --- */
+
+
+/* --- Start animation --- */
+@keyframes rshow-animation {
+    0% {
+        opacity: 0%;
+        transform: translate(0px, -50px);
+    }
+    100% {
+        opacity: 100%;
+         transform: translate(0px, 0px);
+    }
+}
+
+.main-header {
+    padding: 7px 5px; 
+    grid-area: head;
+    animation: rshow-animation 0.5s ease-in-out backwards;
+}
+
+.main-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.youtube-logo {
+    width: 100px;
+    height: 30px;
+}
+
+.user-icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+
+/* burger menu */
+.menu img {
+    width: 30px;
+    height: 30px;
+}
+
+.right-corner {
+    display: flex;
+    justify-content: flex-start;
+}
+.menu {
+    margin-right: 20px;
+    margin-left: 55px;
+    align-self: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.menu:hover {
+    cursor:pointer;
+    background-color: #272727;
+}
+
+/* --- Filter bar --- */
+
+.filter-bar {
+    display: flex;
+    margin-top: 8px;
+    margin-right: 100px;
+}
+
+.filter-bar button {
+    background-color: #272727;
+    color: white;
+    border: solid 0px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.filter-bar button.selected {
+    background-color: white;
+    color: #272727;
+}

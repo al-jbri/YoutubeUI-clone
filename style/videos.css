@@ -1,0 +1,58 @@
+/* --- Start animation --- */
+@keyframes show-animation {
+    0% {
+        opacity: 0%;
+        transform: translate(0px, 50px);
+    }
+    100% {
+        opacity: 100%;
+         transform: translate(0px, 0px);
+    }
+}
+
+
+/*--- Video card---*/
+
+.video-grid a {
+    text-decoration: none;
+    width: 100%;
+    transition: all 0.1s ease-in-out;
+    animation: show-animation 0.5s ease-in-out backwards;
+}
+
+.video-grid a:hover{
+    transform: translate(0, -20px);
+}
+
+
+.video-grid a h4 {
+    color: white;
+}
+
+.video-grid a p {
+    color: gray;
+}
+
+.video-grid a img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+h4 {
+    font-size: clamp(10px,1vw,1vw);
+}
+
+p {
+    font-size: clamp(10px,0.8vw,0.8vw);
+}
+
+/*--- Video grid flow ---*/
+
+.video-grid {
+    display: grid;
+    grid-template-rows:auto;
+    grid-template-columns: repeat(auto-fit, minmax( 200px, 1fr));
+    gap: 40px;
+    overflow-y: auto ;
+    overflow-x: hidden;
+}

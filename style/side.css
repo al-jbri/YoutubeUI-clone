@@ -1,0 +1,41 @@
+/* --- Start animation --- */
+@keyframes slide-animation {
+    0% {
+        transform: translate(50px, 0px);
+    }
+    100% {
+         transform: translate(0px, 0px);
+    }
+}
+
+
+
+.side-bar {
+    display: flex;
+    flex-flow: column;
+    padding-left: 10px;
+}
+.side-bar a span {
+    margin-top: 5px;
+    color: white;
+}
+
+.side-bar a {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    animation: slide-animation 0.5s ease-in-out both;
+}
+
+.side-bar a:hover {
+    background-color: #272727;
+}
+.side-bar img {
+    width: 30px;
+    height: 30px;
+
+}

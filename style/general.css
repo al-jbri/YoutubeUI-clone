@@ -1,0 +1,70 @@
+/* --- General --- */
+@font-face {
+    font-family: "tajwal";
+    src: url(/resources/Tajawal-Regular.ttf);
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "bottombar bottombar"
+    ;
+    overflow: hidden;
+    background-color: #0f0f0f;
+}
+
+.bottom-bar {
+    grid-area: bottombar;
+    gap: 20px;
+}
+
+.main-header {
+    grid-area: header;
+}
+
+.video-grid {
+    grid-area: main;
+    align-items: center;
+}
+.side-bar {
+    grid-area: sidebar;
+}
+
+
+
+
+/* ======= TABLET RESPONSIVE  ======== */
+@media (max-width: 1024px) {
+    .side-bar {
+        display: none;
+    }
+    .filter-bar {
+        margin-right: 0px;
+    }
+}
+
+/* ======    MOBILE RESPONSIVE  ====== */
+@media (max-width: 800px) {
+    .right-corner, .user-icons, .filter-bar {
+        display: none;
+    }
+    .search-bar {
+        width: 100vw; 
+    }
+
+    .bottom-bar {
+        display: flex;
+    }
+}
+
+/* ======    BIG  Monitors RESPONSIVE  ====== */
+@media (min-width: 1500px) {
+    .video-grid {
+         grid-template-columns: repeat(5, 1fr);
+    }
+}
